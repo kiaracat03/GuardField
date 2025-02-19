@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardField - Network Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ff6600;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            background: #333;
+            color: #ff6600;
+        }
+        button {
+            background: #ff6600;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            text-align: left;
+            background: #111;
+            padding: 10px;
+            border-radius: 5px;
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GuardField Network Scanner</h1>
+        <p>Click the button to scan your local network for connected devices</p>
+        <button onclick="scanNetwork()">Scan Network</button>
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+        function scanNetwork() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Scanning local network...</p>';
+            
+            setTimeout(() => {
+                resultsDiv.innerHTML += '<p>Devices found: 3</p><ul><li>192.168.1.2 - Device A</li><li>192.168.1.3 - Device B</li><li>192.168.1.4 - Device C</li></ul>';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
