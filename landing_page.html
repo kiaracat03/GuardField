@@ -48,22 +48,22 @@
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>GuardField Network Scanner</h1>
-        <p>Click the button to scan your local network for connected devices</p>
-        <button onclick="scanNetwork()">Scan Network</button>
-        <div class="results" id="results"></div>
+        <form method="POST">
+            <label for="user_input">Add the IP addresses of your smart home devices:</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <button type="submit">Find Vulnerabilities</button>
+        </form>
     </div>
 
-    <script>
-        function scanNetwork() {
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '<p>Scanning local network...</p>';
-            
-            setTimeout(() => {
-                resultsDiv.innerHTML += '<p>Devices found: 3</p><ul><li>192.168.1.2 - Device A</li><li>192.168.1.3 - Device B</li><li>192.168.1.4 - Device C</li></ul>';
-            }, 2000);
-        }
-    </script>
+    <!--
+    {% if output %}
+    <h2>Output:</h2>
+    <pre>{{ output }}</pre>
+    {% endif %}
+    -->
+    
 </body>
 </html>
