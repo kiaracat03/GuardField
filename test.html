@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Script Runner</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        form { margin-top: 20px; }
+        input { padding: 8px; margin: 10px; }
+        button { padding: 8px 15px; }
+        pre { background: #f4f4f4; padding: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>Run a Script on Raspberry Pi</h1>
+    <form method="POST">
+        <label for="user_input">Enter Input:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Run Script</button>
+    </form>
+    
+    {% if output %}
+    <h2>Output:</h2>
+    <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+</html>
