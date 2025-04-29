@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardField</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/laconic');
+
+        body {
+            font-family: 'Laconic', sans-serif;
+            background-color: #ffffff;
+            color: #ff6600;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
+        }
+
+        input,button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+        }
+
+        input {
+            /*background: #0000;
+            color: #0000;
+            border: #0000;*/
+            border-radius: 5px;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        button {
+            background: #ff4000;
+            color: #ffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .results {
+            margin-top: 20px;
+            text-align: left;
+            background: #111;
+            padding: 10px;
+            border-radius: 5px;
+            color: #ff4000;
+        }
+
+        img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 80px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .sidenav:hover {
+            width: 200px;
+        }
+
+        .sidenav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #ff4000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="/templates/index.html">Run Scan</a>
+        <a href="/templates/create_scan.html">Create Scan</a>
+        <a href="/templates/vulns.html">Display Vulns</a>
+        <a href="/templates/about_me.html">About Us</a>
+    </div>
+
+    <h1>GuardField</h1>
+    <img src="/images/fatcat1.jpg" alt="GuardField Cat" style="width:175px;height:160px;">
+    
+    <h2>Create Scan</h2>
+
+    <div class="container">
+        <form method="POST">
+            <label for="user_input">Add the IP addresses of your smart home devices:</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <button type="submit">Create scan to run later</button>
+        </form>
+    </div>
+
+    <!--
+    {% if output %}
+    <h2>Output:</h2>
+    <pre>{{ output }}</pre>
+    {% endif %}
+    -->
+
+</body>
+
+</html>

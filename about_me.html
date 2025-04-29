@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GuardField</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/laconic');
+
+        body {
+            font-family: 'Laconic', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff6600;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 80px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .sidenav:hover {
+            width: 200px;
+        }
+
+        .sidenav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #ff4000;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="/templates/index.html">Run Scan</a>
+        <a href="/templates/create_scan.html">Create Scan</a>
+        <a href="/templates/vulns.html">Display Vulns</a>
+        <a href="/templates/about_me.html">About Us</a>
+    </div>
+
+
+    <div class="container">
+        <h1>About GuardField</h1>
+        <img src="/images/fatcat1.jpg" alt="GuardField Cat" style="width:300px;height:300px;">
+
+        <p>GuardField is a smart home vulnerability scanner used to protect against insecure smart devices.</p>
+        <p>With an easy-to-use interface, GuardField enables you to input IP addresses and scan for security issues, ensuring your smart home remains protected from cyber threats.</p>
+
+        <h2>Our Mission</h2>
+        <p>To ensure that the convenience of smart devices don't compromise home security.</p>
+
+        <!--<p>Our mission is to ensure that the convenience of smart devices don't compromise home security.</p>
+        font-family: Pacifico, cursive;-->
+    </div>
+
+</body>
+</html>
